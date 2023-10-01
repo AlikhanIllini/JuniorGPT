@@ -8,3 +8,29 @@ JuniorGPT is designed to:
 3. Define and initialize a GPT-like architecture.
 4. Train the model.
 5. Generate Shakespearean-style text.
+
+# System Requirements
+- Python 3.x
+- PyTorch (latest version)
+- CUDA (if using GPU for training)
+
+# Setup and Run
+1. Place your Shakespeare dataset named input.txt in the root directory.
+2. Run the script. The script will train the model and generate text samples.
+3. Find the generated Shakespearean-style text in the output.txt file.
+
+# Code Structure
+- Initial Setup: Hyperparameters, GPU check, manual seed, and other configuration details.
+- Data Preparation:
+  - Loading the Shakespeare dataset.
+  - Tokenizing the text and creating a vocabulary for unique characters.
+  - Splitting the data into training and validation sets.
+- Model Architecture:
+  - Definition of various sub-modules (like MultiHeadAttention, FeedFoward, and Block) which will be used in the main GPT model.
+  - Main GPT model (called GPTLanguageModel) defined using the sub-modules.
+- Training Loop:
+  - The model is trained using the AdamW optimizer.
+  - Loss is estimated every eval_interval steps.
+- Text Generation:
+  - A context tensor is initialized with zeros.
+  - The model generates text in the style of Shakespeare. This text is saved to output.txt.

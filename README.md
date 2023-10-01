@@ -34,3 +34,6 @@ JuniorGPT is designed to:
 - Text Generation:
   - A context tensor is initialized with zeros.
   - The model generates text in the style of Shakespeare. This text is saved to output.txt.
+
+# Output
+At the end of the training, you will see a sample output printed in the console. Additionally, the generated text will be saved in output.txt in the root directory.
